@@ -1,3 +1,6 @@
+// https://gist.github.com/straker/a864a59182bed09e0232#file-two-way-binding-js
+// By Straker
+
 /**
  * @param {object} scope - Object that all bound data will be attached to.
  */
