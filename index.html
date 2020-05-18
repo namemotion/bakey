@@ -132,13 +132,13 @@
     <script>
         ingredientes = {
             hidratacion: 85,
-            peso: 925,
+            peso: 1000,
             madre: 200,
             harina: function() {
                 return  Math.round((this.peso / (this.hidratacion/100 + 1)) - (this.madre / 2))
             },
             agua: function() {
-                return  Math.round((this.harina() * this.hidratacion/100) - (this.madre / 2))
+                return  Math.round(((this.harina() + (this.madre/2)) * this.hidratacion/100) - (this.madre / 2))
             },
             sal: function() {
                 return Math.round((this.harina() + (this.madre/2)) * 0.02)
