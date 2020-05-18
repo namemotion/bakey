@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css">  
     <title>Calculadora de panadero</title>
+    <style>
+        .tag {
+            margin: 5px;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -21,27 +26,29 @@
                     <div class="form-control">
                         <input type="number" id="peso" data-bind="ingredientes.hidratacion" min="50" max="90">
                         <label for="peso">¿Hidratación? (en porcentaje)</label>
+                        <ul class="tags">
+                            <li class="tag tag-blue">80-85% Chapata</li>
+                            <li class="tag tag-orange">70-80% Pan de pueblo</li>
+                            <li class="tag tag-green">60-70% Pan estándar o de molde</li>
+                            <li class="tag tag-red">55-60% Pizza</li>
+                        </ul>   
                     </div>
                     <div class="form-control">
                         <input type="number" id="peso" data-bind="ingredientes.peso">
                         <label for="peso">¿Cuánto quieres que pese el pan? (en gramos)</label>
+                        <ul class="tags">
+                            <li class="tag tag-red">300g para una Pizza</li>
+                            <li class="tag tag-blue">500g para una chapata</li>
+                            <li class="tag tag-orange">800-1000g para un pan de pueblo</li>
+                        </ul>
                     </div>
                     <div class="form-control">
                         <input type="number" id="madre" data-bind="ingredientes.madre">
                         <label for="madre">¿Cuánta masa madre vas a usar? (en gramos)</label>
+                        <ul class="tags"><li class="tag tag-orange">20% del total</li></ul>
                     </div>
                 </div>
                 </form>
-                <br>
-                <div>
-                    <h4>Hidratación habitual según tipo de pan.</h4>
-                    <ul class="tags">
-                        <li class="tag tag-rounded tag-blue">80-85% Chapata</li>
-                        <li class="tag tag-rounded tag-orange">70-80% Pan de pueblo</li>
-                        <li class="tag tag-rounded tag-green">60-70% Pan estándar o de molde</li>
-                        <li class="tag tag-rounded tag-red">55-60% Pizza</li>
-                    </ul>
-                </div>
                 <br>
                 <div id="ingredientes">
                     <h4>Ingredientes</h4>
