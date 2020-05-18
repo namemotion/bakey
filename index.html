@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css">  
+    <title>Calculadora de panadero</title>
+</head>
+<body>
+    <nav>
+        <div class="align-center">
+            <h2><a href="/">Calculadora de panadero</a></h2>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                 <div>
+                    <h4>Datos básicos</h4>
+                    <form>
+                        <label for="peso">¿Hidratación? (en porcentaje)</label>
+                        <input type="number" id="peso" data-bind="ingredientes.hidratacion" min="55" max="85"><br/>
+                        <ul class="tags">
+                            <li class="tag tag-rounded tag-blue">80-85% Chapata</li>
+                            <li class="tag tag-rounded tag-orange">70-75% Pan de pueblo</li>
+                            <li class="tag tag-rounded tag-green">60-70% Pan estándar o de molde</li>
+                            <li class="tag tag-rounded tag-red">55-60% Pizza</li>
+                        </ul>
+                        <label for="peso">¿Cuánto quieres que pese el pan? (en gramos)</label>
+                        <input type="number" id="peso" data-bind="ingredientes.peso">
+                        <label for="madre">¿Cuánta masa madre vas a usar? (en gramos)</label>
+                        <input type="number" id="madre" data-bind="ingredientes.madre">
+                    </form>
+                </div>
+                <div id="ingredientes">
+                    <h4>Ingredientes</h4>
+                    <ul>
+                        <li><span data-bind="ingredientes.harina"></span> gramos de harina</li>
+                        <li><span data-bind="ingredientes.agua"></span> gramos de agua</li>
+                        <li><span data-bind="ingredientes.madre"></span> gramos de masa madre</li>
+                        <li><span data-bind="ingredientes.sal"></span> gramos de sal</li>
+                        <li><span data-bind="ingredientes.levadura"></span> gramos de levadura</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Instrucciones</h4>
+                    <p id="instrucciones">
+                        El proceso de formado sigue siempre los mismos puntos.
+                    </p>
+                    <ol>
+                        <li>Autólisis o amasado</li>
+                        <li>Doblado y desarrollo del gluten</li>
+                        <li>Levado</li>
+                        <li>Horneado</li>
+                    </ol>
+                    <p>
+                        Lo primero que debemos hacer es mezclar bien los ingredientes
+                        para que la harina quede completamente hidratada. Siempre es bueno
+                        ayudar a desarrollar la masa con un mejor orden en la mezcla de
+                        ingredientes, por lo que si usas masa madre la mejor opción es
+                        disolverla en agua templada (unos 35ºC) para que no queden grumos
+                        y luego añadir la harina y la sal. Lo mismo en caso de usar levadura
+                        en lugar de masa madre.
+                    </p>
+                    <p>
+                        La autólisis es el proceso por el que básicamente la masa se
+                        amasa sola a partir del tiempo. Este proceso varía en el tiempo
+                        en función de la temperatura ambiente, pero digamos que para una
+                        temperatura de unos 25ºC sería de alrededor de 1 hora.
+                    </p>
+                    <p>
+                        Para desarrollar el gluten, es decir, formar la red que permite
+                        la forma del pan y que tenga una buena estructura y crecimiento,
+                        puedes hacer dos cosas. Una es saltarte la autólisis y amasar
+                        durante 15 minutos tu masa (amasado francés por ejemplo), y otra es
+                        después de haber esperado la autólisis proceder a hacer doblados
+                        de la masa 3 o 4 veces con una separación de entre 30 y 60 minutos
+                        cada una.
+                    </p>
+                    <p>
+                        Estas dobleces se trata de doblar la masa sobre sí misma estirándola
+                        un poco por los 4 lados imaginándonos que es un cuadrado. Una vez hecho
+                        se deja reposar nuevamente. Con 3 o 4 veces que se haga es suficiente.
+                    </p>
+                    <p>
+                        Una vez "amasado" el pan tenemos que esperar su levado. Cuando está hecho
+                        con masa madre, además de levar, fermenta, lo que le da ese sabor
+                        característico. Esto a temperatura ambiente puede tardar entre 2 y 4 horas.
+                        La masa debe crecer y posiblemente hará burbujas. Si quieres que fermente más
+                        para el sabor, un poco antes de que doble su tamaño, guárdalo en la nevera.
+                        Esto facilita que siga la fermentación y el levado ralentice. Es mejor
+                        formar el pan antes de guardarlo para llevarlo al horno directo.
+                    </p>
+                    <p>
+                        Cuando el pan esté desarrollado hay que formarlo. Hay que tener cuidado
+                        en no desgasarlo. Se puede coratar en las partes que sean para hacer
+                        dos barras o un solo pan redondo haciendo una bola o si es para pizza se
+                        puede ir formando el pan desde el centro para dejar los bordes con burbujas. 
+                    </p>
+                    <p>
+                        Acuérdate de formarlo con harina sobre la mesa y poniéndole harina encima
+                        para que no se pegue.
+                    </p>
+                    <p>
+                        Para hornearlo pon un recipiente metálico con un poco de agua hirviendo para
+                        que genere humedad dentro. No mucha porque debe durar la humedad como la mitad
+                        del horneado. Hazle cortes como gustes en el pan para que abra por ahí
+                        mientras está en el horno. La temperatura al principio debe estar fuerte
+                        para formar la corteza y húmedo para que crezca. Una vez que ha crecido la
+                        temperatura se puede bajar a unos 200ºC y esperar a que se dore. Si la miga
+                        no se te forma bien déjalo un poco más en el horno o hazlo con temperaturas
+                        algo más bajas. 
+                    </p>
+                    <p>
+                        Cuando lo saques del horno déjalo reposar sobre una rejilla hasta que enfríe,
+                        y a comer.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <p class="copyright">
+            <a href="https://namemotion.com">
+                <img src="https://appraisal.namemotion.com/assets/images/namemotion_logo.svg" height="16px" max-width="80%">
+            </a>
+            &copy; 2020
+        </p>
+    </div>
+
+    <script src="bind.js"></script>
+    <script>
+        ingredientes = {
+            hidratacion: 85,
+            peso: 925,
+            madre: 200,
+            harina: function() {
+                return  Math.round(this.peso / (this.hidratacion/100 + 1)) - (this.madre / 2);
+            },
+            agua: function() {
+                return  Math.round(this.harina() * this.hidratacion/100) - (this.madre / 2)
+            },
+            sal: function() {
+                return Math.round((this.harina() + (this.madre/2) ) * 0.02)
+            },
+            levadura: function() {
+                return Math.round(this.madre == 0 ? ((this.harina() + (this.madre/2)) * 0.01) : 0)
+            },
+       };
+
+       twoWayBind(ingredientes);
+
+    </script>
+</body>
+</html>
