@@ -15,33 +15,45 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                 <div>
-                    <h4>Datos básicos</h4>
-                    <form>
+                <h4>Datos básicos</h4>
+                <form>
+                <div class="form-control-group">
+                    <div class="form-control">
+                        <input type="number" id="peso" data-bind="ingredientes.hidratacion" min="50" max="90">
                         <label for="peso">¿Hidratación? (en porcentaje)</label>
-                        <input type="number" id="peso" data-bind="ingredientes.hidratacion" min="55" max="85"><br/>
-                        <ul class="tags">
-                            <li class="tag tag-rounded tag-blue">80-85% Chapata</li>
-                            <li class="tag tag-rounded tag-orange">70-75% Pan de pueblo</li>
-                            <li class="tag tag-rounded tag-green">60-70% Pan estándar o de molde</li>
-                            <li class="tag tag-rounded tag-red">55-60% Pizza</li>
-                        </ul>
-                        <label for="peso">¿Cuánto quieres que pese el pan? (en gramos)</label>
+                    </div>
+                    <div class="form-control">
                         <input type="number" id="peso" data-bind="ingredientes.peso">
-                        <label for="madre">¿Cuánta masa madre vas a usar? (en gramos)</label>
+                        <label for="peso">¿Cuánto quieres que pese el pan? (en gramos)</label>
+                    </div>
+                    <div class="form-control">
                         <input type="number" id="madre" data-bind="ingredientes.madre">
-                    </form>
+                        <label for="madre">¿Cuánta masa madre vas a usar? (en gramos)</label>
+                    </div>
                 </div>
+                </form>
+                <br>
+                <div>
+                    <h4>Hidratación habitual según tipo de pan.</h4>
+                    <ul class="tags">
+                        <li class="tag tag-rounded tag-blue">80-85% Chapata</li>
+                        <li class="tag tag-rounded tag-orange">70-80% Pan de pueblo</li>
+                        <li class="tag tag-rounded tag-green">60-70% Pan estándar o de molde</li>
+                        <li class="tag tag-rounded tag-red">55-60% Pizza</li>
+                    </ul>
+                </div>
+                <br>
                 <div id="ingredientes">
                     <h4>Ingredientes</h4>
                     <ul>
-                        <li><span data-bind="ingredientes.harina"></span> gramos de harina</li>
-                        <li><span data-bind="ingredientes.agua"></span> gramos de agua</li>
-                        <li><span data-bind="ingredientes.madre"></span> gramos de masa madre</li>
-                        <li><span data-bind="ingredientes.sal"></span> gramos de sal</li>
-                        <li><span data-bind="ingredientes.levadura"></span> gramos de levadura</li>
+                        <li><strong><span data-bind="ingredientes.harina"></span></strong> gramos de harina</li>
+                        <li><strong><span data-bind="ingredientes.agua"></span></strong> gramos de agua</li>
+                        <li><strong><span data-bind="ingredientes.madre"></span></strong> gramos de masa madre</li>
+                        <li><strong><span data-bind="ingredientes.sal"></span></strong> gramos de sal</li>
+                        <li><strong><span data-bind="ingredientes.levadura"></span></strong> gramos de levadura</li>
                     </ul>
                 </div>
+                <br>
                 <div>
                     <h4>Instrucciones</h4>
                     <p id="instrucciones">
